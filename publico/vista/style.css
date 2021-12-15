@@ -1,0 +1,114 @@
+
+html,body {
+  height: auto;
+  width: auto;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #e2e1e1;
+}
+/* Sing Ing */
+.imgSingIng{
+    display:block;
+    margin:auto;
+    margin-top: 4rem!important;
+    margin-bottom: 1rem!important;
+    width: 145px;
+    height: 66px;
+    text-align: center!important;
+}
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 5;
+}
+.fw-normal{
+    font-weight: 400!important;
+    margin-bottom: 1rem!important;
+    font-size: 1.75rem;
+    text-align: center!important;
+}
+.form-signin input[type="email"] {
+    margin-bottom: 5px;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    padding: 1rem 0.75rem;
+    height: calc(0.5rem + 2px);
+    line-height: 1.25;
+    display: block;
+    width: 90%;
+    position: relative;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    padding: 1rem 0.75rem;
+    height: calc(0.5rem + 2px);
+    line-height: 1.25;
+    display: block;
+    width: 90%;
+    position: relative;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn-primary{
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: 0.3rem;
+    width: 100%!important;
+}
+.regresar{
+    color: #0004ff!important;
+    margin-top: 3rem!important;
+    margin-bottom: 1rem!important;
+    font-size: 1.2rem;
+    text-align: center!important;
+}
+.text-muted{
+    --bs-text-opacity: 1;
+    color: #6c757d!important;
+    margin-bottom: 1rem!important;
+    margin-top: 2rem!important;
+    text-align: center!important;
+}
+
+/* Crear Usuarios */
