@@ -95,6 +95,13 @@ body {
     border-radius: 0.3rem;
     width: 100%!important;
 }
+.nav-linkS {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #2aa198;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+}
 .regresar{
     color: #0004ff!important;
     margin-top: 3rem!important;
@@ -136,9 +143,9 @@ body {
     margin-left: auto;
 }
 .row{
-  display: flex;
+    display: flex;
     flex-wrap: wrap;
-    margin-right: calc(-15.5 * var(--bs-gutter-x));
+    margin-right: calc(-10.5 * var(--bs-gutter-x));
     margin-left: calc(23.5 * var(--bs-gutter-x));
 }
 .gs5{
@@ -197,10 +204,11 @@ body {
 }
 .regresarC{
   color: #0004ff!important;
+  margin-left: 24rem;
   margin-top: 3rem!important;
   margin-bottom: 1rem!important;
   font-size: 1.2rem;
-  padding: 0.5rem 24rem;
+  text-align: center!important;
 }
 .text-mutedC{
   --bs-text-opacity: 1;

@@ -10,6 +10,7 @@
     <title>Crear Cliente</title>
     <link href="style.css" rel="stylesheet">
     <link href="../controladores/validacion.js" rel="stylesheet">
+
     <style>
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -29,76 +30,72 @@
 </head>
 
 <body class="bodyC">
-    <div class="containerC">
-        <main>
-            <div>
-                <img class="imgCrear" src="../../Imagenes/Logo.png" alt="" width="150" height="70">
-                <h2 class="crearC">Crear Cuenta</h2>
-            </div>
-            <div class="row g-5">
-                <div class="col-lg-8">
-                    <form class="needs-validation" novalidate>
-                        <div class="row g-3">
-                            
-                            <div class="col-12T">
-                                <label for="address2" class="form-label">Cedula</label>
-                                <input type="text" class="form-control" id="Cedula">
-                            </div>
-                            <div class="col-sm-6">
-                                <label for="firstName" class="form-label">Nombres</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                                <div class="invalid-feedback">
-                                    Valid first name is required.
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6">
-                                <label for="lastName" class="form-label">Apellidos</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                                <div class="invalid-feedback">
-                                    Valid last name is required.
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="you@example.com">
-                                <div class="invalid-feedback">
-                                    Please enter a valid email address for shipping updates.
-                                </div>
-                            </div>
-
-                            <div class="col-12">
-                                <label for="address" class="form-label">Direccion</label>
-                                <input type="text" class="form-control" id="address" placeholder="Cuenca 123"
-                                    required>
-                                <div class="invalid-feedback">
-                                    Please enter your shipping address.
-                                </div>
-                            </div>
-
-                            <div class="col-12T">
-                                <label for="address2" class="form-label">Telefono</label>
-                                <input type="text" class="form-control" id="Telefono" placeholder="Telefono">
-                            </div>
-                            <div class="col-12T">
-                                <label for="address2" class="form-label">Contraseña</label>
-                                <input type="text" class="form-control" id="Contraseña" placeholder="Contraseña">
-                            </div>
-                            <div class="col-12T">
-                                <label for="address2" class="form-label">Repetir contraseña</label>
-                                <input type="text" class="form-control" id="Repetir contraseña" placeholder="Repetir contraseña">
-                                <br>
-                            </div>
-                        <button class="btn-primaryC" type="submit">Continuar</button>
-                        </div>
-                        <br>
-                        <label class="regresarC">Regresar</label>
-                        <p class="text-mutedC">&copy; 2021–2021</p>
-                    </form>
+    <form id="formulario01" method="POST" action="../controladores/crearUsuario.php">
+        <div class="containerC">
+            <main>
+                <div>
+                    <img class="imgCrear" src="../../Imagenes/Logo.png" alt="" width="150" height="70">
+                    <h2 class="crearC">Crear Cuenta</h2>
                 </div>
-            </div>
-        </main>
-    </div>
-    <script src="form-validation.js"></script>
+                <div class="row g-5">
+                    <div class="col-lg-8">
+                        <form class="needs-validation" novalidate>
+                            <div class="row g-3">
+
+                                <div class="col-12T">
+                                    <label for="cedula" class="form-label">Cedula</label>
+                                    <input type="text" class="form-control" id="cedula" value="" name="cedula"
+                                        placeholder="Ingrese el número de cedula ..." required>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="nombres" class="form-label">Nombres</label>
+                                    <input type="text" class="form-control" id="nombres" name="nombres"
+                                        placeholder="Ingrese sus dos nombres ..." value="" required>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <label for="apellidos" class="form-label">Apellidos</label>
+                                    <input type="text" class="form-control" id="apellidos" name="apellidos"
+                                        placeholder="Ingrese sus dos apellidos ..." value="" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="correo" class="form-label">Email</label>
+                                    <input type="text" class="form-control" id="correo" value="" name="correo"
+                                        placeholder="Ingrese su dirección ..." required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="direccion" class="form-label">Direccion</label>
+                                    <input type="text" class="form-control" id="direccion" value="" name="direccion"
+                                        placeholder="Ingrese la direccion ..." required>
+                                </div>
+                                <div class="col-12T">
+                                    <label for="telefono" class="form-label">Telefono</label>
+                                    <input type="text" class="form-control" id="telefono" value="" name="telefono"
+                                        placeholder="Ingrese el telefono ..." required>
+                                </div>
+                                <div class="col-12T">
+                                    <label for="contrasena" class="form-label">Contraseña</label>
+                                    <input type="text" class="form-control" id="contrasena" value="" name="contrasena"
+                                        placeholder="Ingrese la contraseña ..." required>
+                                </div>
+                                <div class="col-12T">
+                                    <label for="Repetir contraseña" class="form-label">Repetir contraseña</label>
+                                    <input type="text" class="form-control" id="Repetir contraseña" value=""
+                                        placeholder="Ingrese nuevamente la contraseña ..." require>
+                                    <br>
+                                </div>
+                                <button class="btn-primaryC" type="submit">Continuar</button>
+                            </div>
+                            <br>
+                            <a class="nav-linkS" href="Principal.html"><label class="regresarC">Regresar</label></a>
+                            <p class="text-mutedC">&copy; 2021–2021</p>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <script src="form-validation.js"></script>
+    </form>
 </body>
+
 </html>

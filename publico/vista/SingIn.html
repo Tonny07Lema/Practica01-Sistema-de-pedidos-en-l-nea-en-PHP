@@ -30,23 +30,25 @@
 </head>
 
 <body class="text-center">
-
-    <main class="form-signin">
-        <form>
-            <img class="imgSingIng" src="../../Imagenes/Logo.png" alt="" width="72" height="57">
-            <h1 class="fw-normal">Iniciar sesion</h1>
-
-            <div class="form-floating">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            </div>
-            <div class="form-floating">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                
-            </div>
-            <button class="btn-primary" type="submit">Sign in</button>
-            <label class="regresar">Regresar</label>
-            <p class="text-muted">&copy; 2021–2021</p>
-        </form>
-    </main>
+    <form id="formulario01" method="POST" action="../controladores/login.php">
+        <main class="form-signin">
+            <form>
+                <img class="imgSingIng" src="../../Imagenes/Logo.png" alt="" width="72" height="57">
+                <h1 class="fw-normal">Iniciar sesion</h1>
+    
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="correo"  name="correo" value="" placeholder="Ingrese el correo ...">
+                </div>
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="contrasena" name="contrasena" value="" placeholder="Ingrese sucontraseña ..." >
+    
+                </div>
+                <button class="btn-primary" type="submit">Sign in</button>
+                <a class="nav-linkS" href="Principal.html"><label class="regresar">Regresar</label></a>
+                <p class="text-muted">&copy; 2021–2021</p>
+            </form>
+        </main>
+    </form>  
 </body>
+
 </html>
