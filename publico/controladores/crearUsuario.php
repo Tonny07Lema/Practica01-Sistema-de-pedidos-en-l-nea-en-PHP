@@ -20,7 +20,8 @@
         $telefono = isset($_POST["telefono"]) ? trim($_POST["telefono"]): null;
         $correo = isset($_POST["correo"]) ? trim($_POST["correo"]): null;
         $contrasena = isset($_POST["contrasena"]) ? trim($_POST["contrasena"]) : null;
-        $sql = "INSERT INTO cliente VALUES (1, '$cedula', '$nombres', '$apellidos', '$direccion', '$telefono', '$correo', MD5('$contrasena'))";
+        $rol = isset($_POST["rol"]) ? trim($_POST["rol"]) : null;
+        $sql = "INSERT INTO cliente VALUES (0, '$cedula', '$nombres', '$apellidos', '$direccion', '$telefono', '$correo', MD5('$contrasena'),'$rol')";
         if ($conn->query($sql) === TRUE) {
             echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
             } else {

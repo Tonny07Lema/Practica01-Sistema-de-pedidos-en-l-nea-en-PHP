@@ -75,14 +75,27 @@
                                 </div>
                                 <div class="col-12T">
                                     <label for="contrasena" class="form-label">Contraseña</label>
-                                    <input type="text" class="form-control" id="contrasena" value="" name="contrasena"
-                                        placeholder="Ingrese la contraseña ..." required>
+                                    <input type="password" class="form-control" id="contrasena" value=""
+                                        name="contrasena" placeholder="Ingrese la contraseña ..." required>
                                 </div>
                                 <div class="col-12T">
                                     <label for="Repetir contraseña" class="form-label">Repetir contraseña</label>
-                                    <input type="text" class="form-control" id="Repetir contraseña" value=""
+                                    <input type="password" class="form-control" id="Repetir contraseña" value=""
                                         placeholder="Ingrese nuevamente la contraseña ..." require>
                                     <br>
+                                </div>
+                                <legend class="mt-4">Tipo de Usuario</legend>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="rol"
+                                            id="Cliente" value="Cliente" checked="Cliente">
+                                       Cliente
+                                    </label>
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" name="rol"
+                                            id="Restaurante" value="Restaurante" checked="Restaurante">
+                                        Restaurante
+                                    </label>
                                 </div>
                                 <button class="btn-primaryC" type="submit">Continuar</button>
                             </div>

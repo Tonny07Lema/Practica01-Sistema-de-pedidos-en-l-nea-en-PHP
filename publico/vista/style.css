@@ -1,8 +1,3 @@
-
-html,body {
-  height: auto;
-  width: auto;
-}
 body {
   display: flex;
   align-items: center;
@@ -10,6 +5,19 @@ body {
   padding-bottom: 40px;
   background-color: #e2e1e1;
 }
+html,body {
+  height: auto;
+  width: auto;
+}
+.text-center {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-left: 40rem;
+  padding-bottom: 40px;
+  background-color: #e2e1e1;
+}
+
 /* Sing Ing */
 .imgSingIng{
     display:block;
@@ -279,4 +287,10 @@ body {
   padding-left: var(--bs-gutter-x,.75rem);
   margin-right: auto;
   margin-left: auto;
+}
+.form-check {
+  display: block;
+  min-height: 1.5rem;
+  padding-left: 1.5em;
+  margin-bottom: 0.125rem;
 }
