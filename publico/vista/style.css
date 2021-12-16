@@ -3,7 +3,6 @@ html,body {
   height: auto;
   width: auto;
 }
-
 body {
   display: flex;
   align-items: center;
@@ -113,12 +112,13 @@ body {
 
 /* Crear Usuarios */
 
-.bodyC{
-  display: flex;
-  align-items: center;
-  padding-top: 0%;
-  padding-bottom: 40px;
-  background-color: #e2e1e1;
+.Principal{
+    display: flex;
+    align-items: center;
+    padding-top: 0px;
+    padding-bottom: 40px;
+    background-color: #e2e1e1;
+
 }
 .imgCrear{
   display: block!important;
@@ -128,7 +128,7 @@ body {
 .crearC{
   text-align: center;
 }
-.container{
+.containerC{
     width: 100%;
     padding-right: var(--bs-gutter-x,.75rem);
     padding-left: var(--bs-gutter-x,.75rem);
@@ -154,7 +154,7 @@ body {
 }
 .form-control{
   display: block;
-  width: 75%;
+  width: 65%;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
@@ -209,4 +209,66 @@ body {
   margin-top: 2rem!important;
   padding: 0.5rem 12rem;
   text-align: right!important;
+}
+
+/* Principal */
+.PrincipalP{
+  display: flex;
+  align-items: center;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.imgSingIngP {
+  display: block;
+  margin-top: 0rem!important;
+  margin-bottom: 0rem!important;
+  width: 71px;
+  height: 30px;
+  text-align: center!important;
+}
+.container {
+  max-width: 960px;
+}
+
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  backdrop-filter: saturate(180%) blur(20px);
+  width: -webkit-fill-available;
+}
+
+.sticky-top {
+  position: absolute;
+  top: 0;
+  z-index: 1020;
+}
+.py-1 {
+  padding-top: 0.25rem!important;
+  padding-bottom: 0.25rem!important;
+}
+.py-2 {
+  padding-top: 0.5rem!important;
+  padding-bottom: 0.5rem!important;
+}
+.d-md-inline-block {
+  display: inline-block!important;
+}
+.flex-md-row {
+  flex-direction: row!important;
+}
+.justify-content-between {
+  justify-content: space-between!important;
+}
+.d-flex {
+  display: flex!important;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  width: 100%;
+  padding-right: var(--bs-gutter-x,.75rem);
+  padding-left: var(--bs-gutter-x,.75rem);
+  margin-right: auto;
+  margin-left: auto;
 }
