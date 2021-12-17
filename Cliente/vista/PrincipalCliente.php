@@ -38,41 +38,24 @@
 	</header>
 	<?php
 	//inicio de productos 
-	$Codigo = (isset($_POST['Codigo'])) ? $_POST['Codigo'] : "";
+	$CodigoP = (isset($_POST['CodigoP'])) ? $_POST['CodigoP'] : "";
 	$txtCantidad = (isset($_POST['txtCantidad'])) ? $_POST['txtCantidad'] : "";
 	$txtSubTotal = (isset($_POST['txtSubTotal'])) ? $_POST['txtSubTotal'] : "";
+	$txtProducto = (isset($_POST['txtProducto'])) ? $_POST['txtProducto'] : "";
 	$accion = (isset($_POST['accion'])) ? $_POST['accion'] : "";
 	$codigoR = (int)($_GET["codigo"]);
-	echo $Codigo;
+	echo $CodigoP;
 	include '../../Restaurantes/Controlador/conexion.php';
 	switch ($accion) {
 		case 'Agregar':
-			$sentenciaSQL = "INSERT INTO producto VALUES (0,'$txtNombre','$txtDescripcion','$precio',$c)";
+			echo $CodigoP;
+			$sentenciaSQL = "INSERT INTO pedido_detalle VALUES (0,'$txtCantidad','$txtSubTotal',$CodigoP)";
+			echo $sentenciaSQL;
 			if ($conn->query($sentenciaSQL) == true) {
 			} else {
 				echo "No Vale" . mysqli_error($conn);
 			}
 			header('Locatio:platillos.php');
-			break;
-		case 'Modificar':
-			$sentenciaSQL = "UPDATE producto SET pro_nombre='$txtNombre', pro_descripcion='$txtDescripcion', pro_precio='$precio' WHERE pro_codigo='$txtCodigo' ";
-			$Seleccionado = $conn->query($sentenciaSQL);
-			break;
-		case 'Cancelar':
-			break;
-		case 'Selecionar':
-			$sentenciaSQL = "SELECT * FROM producto WHERE pro_id=$Codigo ";
-			$Seleccionado = $conn->query($sentenciaSQL);
-			foreach ($Seleccionado as $productoss) {
-				$txtNombre = $productoss['pro_nombre'];
-				$txtDescripcion = $productoss['pro_descripcion'];
-				$txtCodigo = $productoss['pro_id'];
-			}
-			break;
-		case 'Borrar':
-			$sentenciaSQL = "DELETE  FROM producto WHERE pro_id=$Codigo ";
-			echo $sentenciaSQL;
-			$Seleccionado = $conn->query($sentenciaSQL);
 			break;
 	}
 	$sentenciaSQL = "SELECT * FROM producto";
@@ -98,7 +81,7 @@
 							</div>
 						</div>
 						<div class="btn-group" role="group" aria-label="">
-							<button type="submit" name="accion" <?php echo ($accion == 'Selecionar') ? 'disabled' : ''; ?> value="Agregar" class="btn btn-success">Agregar</button>
+							<button type="submit" name="accion" <?php echo ($accion == 'Agregar') ? 'disabled' : ''; ?> value="Agregar" class="btn btn-success">Agregar</button>
 						</div>
 					</form>
 				</div>
@@ -125,7 +108,7 @@
                     <td><?php echo $producto['pro_precio']; ?></td>
                     <td>
                         <form method="POST">
-                            <input type="hidden" name="accion" id="Codigo" value="<?php echo $producto['pro_id']; ?>">
+                            <input type="hidden" name="CodigoP" id="Codigo" value="<?php echo $producto['pro_id']; ?>">
                             <input type="submit" name="accion" value="Selecionar" class="btn btn-success">
                         </form>
                     </td>
