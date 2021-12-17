@@ -32,7 +32,7 @@
         <main class="form-signin">
             <form>
                 <img class="imgSingIng" src="../../Imagenes/Logo.png" alt="" width="72" height="57">
-                <h1 class="fw-normal">Iniciar sesion</h1>
+                <h1 class="fw-normal">Crear Usuario</h1>
                 <div class="form-floating">
                     <label for="direccion" class="form-label">Ingrese el Correo electronico</label>
                     <input type="text" class="form-control" id="correo" name="correo" value="" placeholder="Ingrese el correo ...">
@@ -54,7 +54,7 @@
                         <input type="radio" class="form-check-input" name="rol" id="Restaurante" value="Restaurante" checked="Restaurante">
                         Restaurante
                     </label>
-                    <button class="btn-primary" type="submit">Crear</button>
+                    <button class="btn-primary" type="submit" onclick="validarCorreo(form.correo.value)">Crear</button>
                 </div>
                 <a class="nav-linkS" href="Principal.php"><label class="regresar">Regresar</label></a>
                 <p class="text-muted">&copy; 2021–2021</p>

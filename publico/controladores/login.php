@@ -23,30 +23,29 @@
         echo $usu["usu_correo"] . "<br>";
         echo $usu["usu_contrasenia"] . "<br>";
         if ($usu["usu_correo"] == $correo && $usu["usu_contrasenia"] == Md5($contrasena) && $usu["usu_rol"] == 'R') {
-            $cod = $usu['usu_codigo'];
-            echo "<p>Hola</p>".$cod;
+            $cod = $usu['usu_id'];
             $newSql = "SELECT * FROM restaurante WHERE usu_id =$cod";
             $datosRestaurante = $conn->query($newSql);
             foreach ($datosRestaurante as $res) {
-                $nombreRestaurante = $res["res_nombre"];
+                $nombreRestaurante = $res["res_id"];
+                $nombreRes = $res["res_nombre"];
             }
-            header("Location:../../Restaurantes/Vista/PrincipalR.php?nombres=$nombreRestaurante");
+            header("Location:../../Restaurantes/Vista/PrincipalR.php?codigo=$nombreRestaurante&nombre=$nombreRes");
             echo "<p>restautante</p>";
         } else if ($usu["usu_correo"] == $correo && $usu["usu_contrasenia"] == Md5($contrasena) && $usu["usu_rol"] == 'C') {
-            $cod = $usu['usu_codigo'];
-            echo "<p>Hola</p>".$cod;
-            $newSql = "SELECT * FROM restaurante WHERE usu_id =$cod";
+            $codC = $usu['usu_id'];
+            $newSql = "SELECT * FROM cliente WHERE cli_usu  =$codC";
             $datosRestaurante = $conn->query($newSql);
             foreach ($datosRestaurante as $res) {
-                $nombreRestaurante = $res["res_nombre"];
+                $nombreCliente = $res["cli_id"];
+                $nombreCli = $res["cli_nombre"];
             }
-            header("Location:../../Cliente/vista/PrincipalCliente.html?nombres=$nombreRestaurante");
-            echo "<p>restautante</p>";
+            header("Location:../../Cliente/vista/PrincipalCliente.php?codigo=$nombreCliente&nombre=$nombreCli");
+            echo "<p>Cliente</p>";
         }
     }
     //cerrar la base de datos
     $conn->close();
-
     ?>
 </body>
 

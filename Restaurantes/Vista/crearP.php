@@ -14,11 +14,10 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-prymary">
       <ul class="nav navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="Principal.html"><img class="imgSingIngP" src="../../Imagenes/Logo.png"
-              href="Principal.html" alt="" width="80" height="40"></a>
+          <a class="nav-link" href="Principal.html"><img class="imgSingIngP" src="../../Imagenes/Logo.png" href="Principal.html" alt="" width="80" height="40"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="PrincipalR.html">Pagian Principal</a>
+          <a class="nav-link" href="PrincipalR.php">Pagian Principal</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../../publico/vista/Principal.php">Salir</a>
@@ -33,13 +32,7 @@
           Datos Productos
         </div>
         <div class="card-body">
-          <form method="POST" enctype="multipart/form-data">
-            <div class="form-group">
-              <label for="txtID">ID:</label>
-              <input type="block" class="form-control" name="codigo" id="txtId" aria-describedby="emailHelp"
-                placeholder="Id">
-            </div>
-
+          <form method="GET" enctype="multipart/form-data">
             <div class="form-group">
               <label for="txtNombre">Nombre:</label>
               <input type="text" class="form-control" name="nombre" id="txtDescripcion" placeholder="Nombre">
@@ -47,17 +40,17 @@
 
             <div class="form-group">
               <label for="txtDescripcion">Descripcion:</label>
-              <input type="text" class="form-control" name="descripcion" id="txtDescripcion"
-                placeholder="Ingrese la Descripcion del producto">
+              <input type="text" class="form-control" name="descripcion" id="txtDescripcion" placeholder="Ingrese la Descripcion del producto">
             </div>
 
             <div class="form-group">
               <label for="txtPrecio">Precio:</label>
               <input type="text" class="form-control" name="precio" id="txtPrecio" placeholder="`Ingrese el Precio">
             </div>
-              <button type="submit" class="btn btn-primaryC">Continuar</button>
-            </div>
+            <button type="submit" class="btn btn-primaryC">Continuar</button>
+          </form>
         </div>
+      </div>
   </form>
   <form action="../Controlador/index.php" method="POST">
     <a class="nav-link" href="../Controlador/index.php">Lista de productos</a>

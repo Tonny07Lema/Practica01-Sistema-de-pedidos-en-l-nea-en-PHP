@@ -10,22 +10,24 @@
 <body>
     <table style="width:100%">
         <tr>
+            <th>Codigo Producto</th>
             <th>Nombre</th>
             <th>Descripcion</th>
             <th>Precio</th>
+            <th>Restaurante</th>
         </tr>
         <?php
         include 'conexion.php';
         $sql = "SELECT * FROM producto";
         $result = $conn->query($sql);
-
         if ($result->num_rows > 0) {
-
             while ($row = $result->fetch_assoc()) {
                 echo "<tr>";
+                echo " <td>" . $row["pro_id"] . "</td>";
                 echo " <td>" . $row["pro_nombre"] . "</td>";
                 echo " <td>" . $row['pro_descripcion'] . "</td>";
                 echo " <td>" . $row['pro_precio'] . "</td>";
+                echo " <td>" . $row['res_id'] . "</td>";
                 echo " <td> <a href='eliminarP.php?codigo=" . $row['pro_id'] . "'>Eliminar</a> </td>";
                 echo " <td> <a href='modificarP.php?codigo=" . $row['pro_id'] . "'>Modificar</a> </td>";
                 echo "</tr>";
@@ -38,8 +40,6 @@
         $conn->close();
         ?>
     </table>
-    <a class="nav-link" href="../Vista/crearP.html"><button type="button" class="btn btn-primary btn-lg">Regresar</button></a>
-    
+    <a class="nav-link" href="../Vista/crearP.php" <?php echo 'codigo='.$c;?>><button type="button" class="btn btn-primary btn-lg">Regresar</button></a>
 </body>
-
 </html>
