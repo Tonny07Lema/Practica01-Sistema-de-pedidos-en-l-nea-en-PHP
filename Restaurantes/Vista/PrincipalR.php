@@ -12,11 +12,13 @@
 </head>
 
 <body class="PrincipalP">
-
+    <?php
+        echo "Bienvenido al Restaurante".$_GET["nombres"];
+    ?>
     <header class="site-header sticky-top py-1">
         <nav class="navbar navbar-expand-lg navbar-dark bg-prymary">
             <ul class="nav navbar-nav">
-                <li class="nav-item active" >
+                <li class="nav-item active">
                     <a class="nav-link" href="Principal.html"><img class="imgSingIngP" src="../../Imagenes/Logo.png" href="Principal.html" alt="" width="80" height="40"></a>
                 </li>
                 <li class="nav-item">
@@ -29,7 +31,6 @@
         </nav>
     </header>
     <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-
         <div class="col-md-5 p-lg-5 mx-auto my-5">
             <h1 class="display-4 fw-normal">Punny headline</h1>
             <p class="lead fw-normal">And an even wittier subheading to boot. Jumpstart your marketing efforts with this
@@ -69,8 +70,7 @@
                         </li>
                         <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"
-                                    aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                         </li>
                     </ul>
