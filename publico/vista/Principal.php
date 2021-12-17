@@ -12,19 +12,17 @@
 </head>
 
 <body class="PrincipalP">
-
     <header class="site-header sticky-top py-1">
         <nav class="navbar navbar-expand-lg navbar-dark bg-prymary">
             <ul class="nav navbar-nav">
-                <li class="nav-item active" >
+                <li class="nav-item active">
                     <a class="nav-link" href="Principal.html"><img class="imgSingIngP" src="../../Imagenes/Logo.png" href="Principal.html" alt="" width="80" height="40"></a>
-                    
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="SingIn.html">Iniciar Secion</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="Crear.html">Crear Cuenta</a>
+                    <a class="nav-link" href="crearUsuarioP.html">Crear</a>
                 </li>
             </ul>
         </nav>
@@ -40,109 +38,38 @@
         <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
     </div>
     <br>
-    <div class="card-group">
-        <div class="card">
-            <img class="card-img-top" src="../../Imagenes/images (1).png" alt="Card image cap" width="80" height="59%">
-            <div class="card-body">
-                <h4 class="card-title">Cafes</h4>
-                <div class="form-group">
-                    <label for="exampleSelect2" class="form-label mt-4">Lista de cafes</label>
-                    <select multiple="" class="form-select" id="exampleSelect2">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="../../Imagenes/images.png" alt="Card image cap" alt="" width="80"
-                height="59%">
-            <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <div class="form-group">
-                    <label for="exampleSelect2" class="form-label mt-4">Lista de cafes</label>
-                    <select multiple="" class="form-select" id="exampleSelect2">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="../../Imagenes/images (2).png" alt="Card image cap" width="80" height="59%">
-            <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <div class="form-group">
-                    <label for="exampleSelect2" class="form-label mt-4">Lista de cafes</label>
-                    <select multiple="" class="form-select" id="exampleSelect2">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-    </div>
-    <br>
-    <div class="card-group">
-        <div class="card">
-            <img class="card-img-top" src="../../Imagenes/images (3).png" alt="Card image cap" width="80" height="59%">
-            <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <div class="form-group">
-                    <label for="exampleSelect2" class="form-label mt-4">Lista de cafes</label>
-                    <select multiple="" class="form-select" id="exampleSelect2">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="../../Imagenes/images (3).png" alt="Card image cap" alt="" width="80"
-                height="59%">
-            <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <div class="form-group">
-                    <label for="exampleSelect2" class="form-label mt-4">Lista de cafes</label>
-                    <select multiple="" class="form-select" id="exampleSelect2">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img class="card-img-top" src="../../Imagenes/images (7).png" alt="Card image cap" width="80" height="59%">
-            <div class="card-body">
-                <h4 class="card-title">Title</h4>
-                <div class="form-group">
-                    <label for="exampleSelect2" class="form-label mt-4">Lista de cafes</label>
-                    <select multiple="" class="form-select" id="exampleSelect2">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-    </div>
+    <h1 class="display-4 fw-normal">Lista de Productos</h1>
+    <!DOCTYPE html>
+    <html>
+    <table style="width:100%" class="listado">
+        <tr>
+            <th>Nombre</th>
+            <th>Descripcion</th>
+            <th>Precio</th>
+        </tr>
+        <?php
+        include '../../Restaurantes/Controlador/conexion.php';
+        $sql = "SELECT * FROM producto";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo " <td>" . $row["pro_nombre"] . "</td>";
+                echo " <td>" . $row['pro_descripcion'] . "</td>";
+                echo " <td>" . $row['pro_precio'] . "</td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "<tr>";
+            echo " <td colspan='7'> No existen usuarios registradas en el sistema </td>";
+            echo "</tr>";
+        }
+        $conn->close();
+        ?>
+    </table>
+
+
+    </html>
     <footer class="footer-area bg-f">
         <div class="container">
             <div class="row">
@@ -173,8 +100,7 @@
                         </li>
                         <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
                         </li>
-                        <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"
-                                    aria-hidden="true"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
                         <li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                         </li>
                     </ul>

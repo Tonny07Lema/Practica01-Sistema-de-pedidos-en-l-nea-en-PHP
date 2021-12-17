@@ -16,7 +16,7 @@
         $nombre = isset($_POST["nombre"]) ? trim($_POST["nombre"]) : null;
         $descripcion = isset($_POST["descripcion"]) ? mb_strtoupper(trim($_POST["descripcion"]), 'UTF-8') : null;
         $precio = isset($_POST["precio"]) ? trim($_POST["precio"]): null;
-        $sql = "INSERT INTO producto VALUES (0, '$nombre', '$descripcion','$precio')";
+        $sql = "INSERT INTO producto VALUES (0, '$nombre', '$descripcion','$precio'),null";
         if ($conn->query($sql) === TRUE) {
             echo "<p>Se ha creado los datos personales correctamemte!!!</p>";
             echo "<a href='index.php'>Ver lista</a>";
