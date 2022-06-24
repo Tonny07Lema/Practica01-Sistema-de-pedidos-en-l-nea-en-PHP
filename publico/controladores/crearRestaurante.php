@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Crear Nuevo Restaurante</title>
+    <title>Crear Nuevo Restaurantes</title>
     <style type="text/css" rel="stylesheet">
         .error {
             color: red;
